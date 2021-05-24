@@ -1,8 +1,12 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Supermercado.API.Domain.Models;
+
 namespace Supermercado.API.Domain.Repositories
 {
     public interface ICategoriaRepository
     {
-         Task<IEnumarable<Categoria>> ListAsync();
+         Task<IEnumerable<Categoria>> ListAsync();
          Task AddAsync(Categoria categoria);
          Task<Categoria> FindByIdSync(int id);
          void Update(Categoria categoria);

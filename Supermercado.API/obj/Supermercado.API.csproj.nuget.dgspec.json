@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado.API\\Supermercado.API.csproj": {}
+    "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado\\Supermercado.API\\Supermercado.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado.API\\Supermercado.API.csproj": {
+    "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado\\Supermercado.API\\Supermercado.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado.API\\Supermercado.API.csproj",
+        "projectUniqueName": "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado\\Supermercado.API\\Supermercado.API.csproj",
         "projectName": "Supermercado.API",
-        "projectPath": "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado.API\\Supermercado.API.csproj",
+        "projectPath": "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado\\Supermercado.API\\Supermercado.API.csproj",
         "packagesPath": "C:\\Users\\mariana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado.API\\obj\\",
+        "outputPath": "C:\\Users\\mariana\\Desktop\\Mariana\\pessoal\\Projetos_versionados\\Supermercado\\Supermercado.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -47,6 +47,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
