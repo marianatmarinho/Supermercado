@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Supermercado.API.Persistence.Context;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore;
 
 namespace Supermercado.API
 {
@@ -13,7 +16,16 @@ namespace Supermercado.API
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+           // CreateHostBuilder(args).Build().Run();
+
+           var host = CreateHostBuilder(args);
+           using (var scope = host.Build().Services.CreateScope())
+           using(var context = scope.ServiceProvider.GetService<AppDbContext>())
+           {
+               context.Database.EnsureCreated();
+           }
+
+            host.Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
