@@ -14,7 +14,7 @@ namespace Supermercado.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+      /*  public static void Main(string[] args)
         {
            // CreateHostBuilder(args).Build().Run();
 
@@ -25,7 +25,7 @@ namespace Supermercado.API
                context.Database.EnsureCreated();
            }
 
-            host.Build().Run();
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -33,6 +33,21 @@ namespace Supermercado.API
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                });*/
+
+        public static void Main(string[] args)
+        {
+            var host = BuildWebHost(args);
+            using(var scope = host.Services.CreateScope())
+            using(var context = scope.ServiceProvider.GetService<AppDbContext>())
+            {
+                context.Database.EnsureCreated();
+            }
+            host.Run();
+        }
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+            .UseStartup<Startup>()
+            .Build();
     }
 }
