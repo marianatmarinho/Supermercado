@@ -10,9 +10,8 @@ Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub no dir
 
 ```
 cd "diretorio de sua preferencia"
-git clone https://github.com/marianatmarinho/ExempleXUnitTest.git
+git clone https://github.com/marianatmarinho/Supermercado.git
 ```
-### Ambiente de Desenvolvimento
 ### Ambiente de Desenvolvimento
 - .NET Core SDK 2.2
 - VS Code (Instale a extensão C# para o VS Code)
